@@ -13,10 +13,10 @@ class Fraction:
     def __init__(self, num=0, den=1):
         """This builds a fraction based on some numerator and denominator.
 
-        PRE: den != 0
+        PRE: -
         POST: Fraction is reduced to its simplest form, and the denominator is positive.
         RAISE:
-        - TypeError: If num or den is not an integer.
+        - TypeError: If num and/or den is not an integer.
         - ValueError: If den is zero.
         """
         if not isinstance(num, int) or not isinstance(den, int):
@@ -90,7 +90,7 @@ class Fraction:
     def __add__(self, other):
         """Overloading of the + operator for fractions.
 
-        PRE: other is an instance of Fraction.
+        PRE: -
         POST: Returns a new Fraction representing the sum of self and other.
         RAISE:
         - TypeError: If other is not an instance of Fraction.
@@ -105,7 +105,7 @@ class Fraction:
     def __sub__(self, other):
         """Overloading of the - operator for fractions.
 
-        PRE: other is an instance of Fraction.
+        PRE: -
         POST: Returns a new Fraction representing the difference of self and other.
         RAISE:
         - TypeError: If other is not an instance of Fraction.
@@ -120,7 +120,7 @@ class Fraction:
     def __mul__(self, other):
         """Overloading of the * operator for fractions.
 
-        PRE: other is an instance of Fraction.
+        PRE: -
         POST: Returns a new Fraction representing the product of self and other.
         RAISE:
         - TypeError: If other is not an instance of Fraction.
@@ -133,7 +133,7 @@ class Fraction:
     def __truediv__(self, other):
         """Overloading of the / operator for fractions.
 
-        PRE: other is an instance of Fraction, and other.num != 0.
+        PRE: -
         POST: Returns a new Fraction representing the division of self by other.
         RAISE:
         - TypeError: If other is not an instance of Fraction.
@@ -149,7 +149,7 @@ class Fraction:
     def __pow__(self, power):
         """Overloading of the ** operator for fractions.
 
-        PRE: power is an integer.
+        PRE: -
         POST: Returns a new Fraction representing self raised to the given power.
         RAISE:
         - TypeError: If power is not an integer.
@@ -165,8 +165,10 @@ class Fraction:
     def __eq__(self, other):
         """Overloading of the == operator for fractions.
 
-        PRE: other is an instance of Fraction.
+        PRE: -
         POST: Returns True if self and other are equivalent fractions; False otherwise.
+        RAISE:
+        - TypeError: If other is not an instance of Fraction.
         """
         if not isinstance(other, Fraction):
             raise TypeError("Arguments should be Fractions.")
@@ -218,7 +220,7 @@ class Fraction:
 
         Two fractions are adjacent if the absolute value of the difference is a unit fraction.
 
-        PRE: other is an instance of Fraction.
+        PRE: -
         POST: Returns True if the absolute value of the difference is a unit fraction; False otherwise.
         """
         if not isinstance(other, Fraction):
